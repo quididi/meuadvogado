@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Meu Advogado</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Tela de Login -->
+    <div class="tela ativa" id="login">
+      <img src="imagens/oculos.png" class="logo">
+      <h1>Meu Advogado</h1>
+      <form onsubmit="return loginUsuario(event)">
+        <input type="email" id="login-email" placeholder="Email" required>
+        <input type="password" id="login-senha" placeholder="Senha" required>
+        <button type="submit">Entrar</button>
+      </form>
+      <p class="link" onclick="irPara('cadastro')">Não tens conta? Criar conta</p>
+    </div>
+
+    <!-- Tela de Cadastro -->
+    <div class="tela" id="cadastro">
+      <img src="imagens/oculos.png" class="logo">
+      <h1>Meu Advogado</h1>
+      <form onsubmit="return cadastrarUsuario(event)">
+        <input type="text" id="cad-nome" placeholder="Nome completo" required>
+        <input type="email" id="cad-email" placeholder="Email" required>
+        <input type="password" id="cad-senha" placeholder="Senha" required>
+        <button type="submit">Criar Conta</button>
+      </form>
+      <p class="link" onclick="irPara('login')">Já tens conta? Entrar</p>
+    </div>
+
+    <!-- Tela de Chat -->
+    <div class="tela" id="chat">
+      <div class="app">
+        <header>
+          <img src="imagens/oculos.png" class="icon">
+          <span>Meu Advogado</span>
+        </header>
+
+        <div class="fala">
+          <div class="balao branco">Olá!</div>
+          <img src="imagens/oculos.png" class="oculos">
+          <div class="balao branco" id="texto-animado"></div>
+        </div>
+
+        <div class="botoes">
+          <a href="https://www.chatbase.co/chatbot-iframe/zQlW9-6M6nATq58H6zsB8" class="botao-chat" target="_blank">
+            <img src="imagens/message.png">
+            <span>Iniciar Chat</span>
+          </a>
+          <a href="https://www.chatbase.co/chatbot-iframe/zQlW9-6M6nATq58H6zsB8" class="botao-chat" target="_blank">
+            <img src="imagens/balanca.png">
+            <span>Pesquisar Artigos</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
